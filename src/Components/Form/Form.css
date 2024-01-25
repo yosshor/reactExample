@@ -1,0 +1,13 @@
+.form-input{
+    width:large;
+    height: max-content;
+    text-align: center;
+    font-size: medium;
+    background-color: bisque;
+}
+
+.form-div{
+    display: inline-block;
+    
+
+}
