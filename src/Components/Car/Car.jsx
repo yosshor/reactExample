@@ -9,19 +9,24 @@ export default function Car() {
   });
 
   const handleYearChange = (event) => {
-    setCar({...car, year : event.target.value});
+    // setCar({...car, year : event.target.value});
+    setCar(c => ({...c, year:event.target.value}))
   }
 
   const handleMakeChange = (event) => {
-    setCar({...car, make : event.target.value})
+    //   setCar({...car, make : event.target.value})
+    setCar(c => ({...c, make:event.target.value}))
   }
-  const handleModelChange = (event) => {
-    setCar({...car, model : event.target.value})
+    const handleModelChange = (event) => {
+        // setCar({...car, model : event.target.value})
+        setCar(c => ({...c, model:event.target.value}));
   }
-
-  const handleResetChange = () =>{
-    setCar({ year: new Date().getFullYear(), make: "Subaru", model: "C4" });
-}
+    
+    const handleResetChange = () =>{
+        setCar({ year: new Date().getFullYear(), make: "Subaru", model: "C4" });
+        setCar(c => ({...c, year:2020})); 
+  }
+  
   return <div className='container'>
     <p className='car-status'>Your favorite car is : {car.year} {car.make} {car.model}</p>
     <input className='car-input' type="number" onChange={handleYearChange} value={car.year}/><br/>
