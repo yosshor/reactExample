@@ -23,10 +23,10 @@ export default function Car() {
   }
     
     const handleResetChange = () =>{
-        setCar({ year: new Date().getFullYear(), make: "Subaru", model: "C4" });
+        setCar({ ...car, year: new Date().getFullYear(), make: "Subaru", model: "C4" });
         setCar(c => ({...c, year:2020})); 
   }
-  
+
   return <div className='container'>
     <p className='car-status'>Your favorite car is : {car.year} {car.make} {car.model}</p>
     <input className='car-input' type="number" onChange={handleYearChange} value={car.year}/><br/>
