@@ -1,0 +1,88 @@
+/* Basic styling for the ToDo List container */
+.to-do-list {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the header */
+.to-do-list h2 {
+    color: #5f0303;
+    text-align: center;
+}
+
+/* Styling for the input section */
+.to-do-list input {
+    width: 70%;
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Styling for the Add button */
+.to-do-list .add-button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* hover on add button */
+.to-do-list .add-button:hover{
+    background-color: #027604;
+}
+
+/* Styling for the task list */
+.to-do-list ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Styling for each task item */
+.to-do-list li {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* Styling for the task text */
+.to-do-list .text {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Styling for the action buttons */
+.to-do-list .delete-button,
+.to-do-list .move-up-button,
+.to-do-list .move-down-button {
+    padding: 8px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.to-do-list .delete-button:hover{
+    background-color: #b41605;
+}
+.to-do-list .move-up-button:hover{
+    background-color: #b41605;
+}
+.to-do-list .move-down-button:hover{
+    background-color: #b41605;
+}
+
+/* Styling for the images in move-up and move-down buttons */
+.to-do-list .move-up-button img,
+.to-do-list .move-down-button img {
+    width: 16px;
+    height: 16px;
+}
