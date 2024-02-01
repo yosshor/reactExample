@@ -15,7 +15,9 @@ import ToDoList from './Components/ToDoList/ToDoList.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div style={{ display: 'inline-flex' }}>
-      <div style={{ marginLeft: '5px' }}> <ToDoList /></div>
+      {/* <div style={{ marginLeft: '5px' }}> <ToDoList /></div> */}
+      <div style={{ marginLeft: '5px' }}> <ColorPicker /></div>
+      
     </div>
       {/* <div style={{  marginLeft: '15px', width:'300px'}}><Car /></div> */}
     {/* <Foods/> */}
