@@ -4,7 +4,8 @@ import reactLogo from "/src/assets/react.svg";
 
 export default function DigitalClock() {
   const [time, setTime] = useState(new Date());
-     document.title = "Racheli Shor"
+  document.title = "Clock";
+
   useEffect(() => {
     const intervalId = setInterval(() => {
         setTime(new Date(), 1000)     
