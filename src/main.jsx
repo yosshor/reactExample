@@ -13,14 +13,17 @@ import ToDoList from './Components/ToDoList/ToDoList.jsx'
 import DigitalClock from './Components/DigitalClock/DigitalClock.jsx'
 import ComponentInside1 from './Components/ComponentInside/ComponentInside.jsx'
 import ComponentInside2 from './Components/ComponentInside/ComponentInside2.jsx'
+import Context from './Components/Context/Context.jsx'
+import StopWatch  from './Components/StopWatch/StopWatch.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ComponentInside2 />
+    <StopWatch />
     {/* <div style={{ display: 'inline-flex' }}>
       <div style={{ marginLeft: '5px' }}> <ToDoList /></div> 
       <div style={{ marginLeft: '5px' }}> <DigitalClock /></div>
+      <Context />
       
     </div> */}
       {/* <div style={{  marginLeft: '15px', width:'300px'}}><Car /></div> */}
