@@ -3,9 +3,11 @@ import "./DigitalClock.css";
 import reactLogo from "/src/assets/react.svg";
 
 export default function DigitalClock() {
-  const [time, setTime] = useState(new Date());
-     document.title = "Racheli Shor"
-  useEffect(() => {
+    const [time, setTime] = useState(new Date());
+  
+    document.title = "Yoss Shor"; // time 
+  
+    useEffect(() => {
     const intervalId = setInterval(() => {
         setTime(new Date(), 1000)     
     }, 1000);
