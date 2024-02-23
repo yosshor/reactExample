@@ -4,7 +4,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "./styles.css";
 
 export default function ImageSlider(url) {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [loading, setLoding] = useState(false);
   const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,8 +26,14 @@ export default function ImageSlider(url) {
       const data = await response.json();
       console.log(data);
 
-      if (data) {
+      if (data.length > 0) {
         setImages(data);
+        setLoding(false);
+        setError(null);
+      }
+      else{
+        setError("Images list is empty");
+        console.log("Images list is empty");
         setLoding(false);
       }
     } catch (e) {
@@ -38,7 +44,7 @@ export default function ImageSlider(url) {
   }
 
   if (loading) {
-    <div>The Data Is Loading! Please Wait!</div>;
+    <div><p>The Data Is Loading! Please Wait!</p></div>;
   }
   if (error) {
     <div>Erorr occurd! {error}</div>;
@@ -62,7 +68,7 @@ export default function ImageSlider(url) {
 
   return (
       <div className="form-container">
-        <label for="pageInput">Insert your page:</label>
+        <label htmlFor="pageInput">Insert your page:</label>
         <input
           type="number"
           id="pageInput"
@@ -70,7 +76,7 @@ export default function ImageSlider(url) {
           onChange={handlePageNum}
         />
 
-        <label for="limitInput">Insert your images limit:</label>
+        <label htmlFor="limitInput">Insert your images limit:</label>
         <input
           type="number"
           id="limitInput"
@@ -78,6 +84,7 @@ export default function ImageSlider(url) {
           onChange={handleLimit}
         />
         <input type="submit" value="Submit" onClick={handleChangeLimition} />
+        <h3> {error ? `error occured ${error}` : ""} </h3>
       <div>
         <div className="container">
           <BsArrowLeftCircleFill

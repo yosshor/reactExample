@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 708px;
+  width: 500px;
   height: 450px;
 }
 
@@ -55,8 +55,8 @@
   background-color: gray;
 }
 
-
 .form-container {
+  width: 500px;
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;

@@ -7,12 +7,15 @@ import "./index.css";
 import Students from "./Students.jsx";
 import Counter, {
   CounterUpdateFunction,
-} from "./Components/Counter/Counter.jsx";
+} from "./Components/counter/Counter.jsx";
 import StarRating from './Components/star-rating/index.jsx' 
 // import AppPage from "./Pages/AppPage.jsx";
-import Accordian from "./Components/Accordian/index.jsx";
+import Accordian from "./Components/accordian/index.jsx";
 import RandomColor from "./Components/random-color/index.jsx";
 import ImageSlider from "./Components/image-slider/index.jsx"
+import LoadMoreData from "./Components/load-more-data/index.jsx"
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,5 +28,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         page={"2"}
         limit={"10"}
       />
+
+      <LoadMoreData />
   </React.StrictMode>
 );
