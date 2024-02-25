@@ -18,17 +18,20 @@ import LoadMoreData from "./Components/load-more-data/index.jsx"
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    {/* <Accordian /> */}
-    {/* <RandomColor /> */}
-    {/* <StarRating stars={10}/> */}
-          {/* Image slider component */}
-      <ImageSlider
-        url={"https://picsum.photos/v2/list"}
-        page={"2"}
-        limit={"10"}
-      />
+  
+  <LoadMoreData />
+  
+  );
+  
+  {/* <React.StrictMode>*/}
 
-      <LoadMoreData />
-  </React.StrictMode>
-);
+  {/* <Accordian /> */}
+   {/* <RandomColor /> */}
+   {/* <StarRating stars={10}/> */}
+   {/* Image slider component */}
+   {/* <ImageSlider
+       url={"https://picsum.photos/v2/list"}
+       page={"2"}
+       limit={"10"}
+     /> */}
+       {/* </React.StrictMode>*/}

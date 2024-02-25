@@ -1,0 +1,54 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product {
+    width: calc(25% - 10px); /* 25% for each column with 10px margin between */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  .product p {
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+.load-images{
+    background-attachment: fixed;
+}
+.load-images:hover{
+    background-color: aqua;
+}
+
+/* DownArrow.module.css */
+
+.down-arrow-container {
+    position: fixed;
+    bottom: 20px;
+    left: 90%;
+    transform: translateX(-50%);
+    text-align: right;
+  }
+  
+  .down-arrow {
+    width: 10;
+    height: 10;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #333; /* Adjust color as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .down-arrow:hover {
+    transform: translateY(10px);
+  }
+  
