@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App.jsx";
-import "./index.css";
+// import "./index.css";
 import Students from "./Students.jsx";
 import Counter, {
   CounterUpdateFunction,
@@ -14,12 +14,15 @@ import Accordian from "./Components/accordian/index.jsx";
 import RandomColor from "./Components/random-color/index.jsx";
 import ImageSlider from "./Components/image-slider/index.jsx"
 import LoadMoreData from "./Components/load-more-data/index.jsx"
-
+import menus from "./Components/tree-view/data.js";
+import TreeView from "./Components/tree-view/index.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   
-  <LoadMoreData />
+  // <LoadMoreData />
+
+  <TreeView menus = {menus}/>
   
   );
   
