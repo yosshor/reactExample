@@ -16,13 +16,14 @@ import ImageSlider from "./Components/image-slider/index.jsx"
 import LoadMoreData from "./Components/load-more-data/index.jsx"
 import menus from "./Components/tree-view/data.js";
 import TreeView from "./Components/tree-view/index.jsx";
+import QRCodeGenerator from "./Components/qr-code-generator/index.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   
   // <LoadMoreData />
-
-  <TreeView menus = {menus}/>
+  <QRCodeGenerator />
+  // <TreeView menus = {menus}/>
   
   );
   
