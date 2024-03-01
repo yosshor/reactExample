@@ -17,12 +17,12 @@ import LoadMoreData from "./Components/load-more-data/index.jsx"
 import menus from "./Components/tree-view/data.js";
 import TreeView from "./Components/tree-view/index.jsx";
 import QRCodeGenerator from "./Components/qr-code-generator/index.jsx";
-
+import LightDarkMode from "./Components/dark-light-mode/index.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  
+  <LightDarkMode />
   // <LoadMoreData />
-  <QRCodeGenerator />
+  // <QRCodeGenerator />
   // <TreeView menus = {menus}/>
   
   );
