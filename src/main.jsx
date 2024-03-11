@@ -18,9 +18,12 @@ import menus from "./Components/tree-view/data.js";
 import TreeView from "./Components/tree-view/index.jsx";
 import QRCodeGenerator from "./Components/qr-code-generator/index.jsx";
 import LightDarkMode from "./Components/dark-light-mode/index.jsx"
+import ScrollIndicator from "./Components/scroll-indicator/index.jsx";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <LightDarkMode />
+  // <LightDarkMode />
+  <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
   // <LoadMoreData />
   // <QRCodeGenerator />
   // <TreeView menus = {menus}/>
