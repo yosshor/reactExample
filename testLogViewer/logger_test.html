@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log Viewer</title>
+        <style>
+            /* Style the log container */
+            #logContainer {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            
+            /* Style different log levels */
+            .error { color: red; }
+            .warning { color: orange; }
+            .info { color: blue; }
+            .debug { color: green; }
+            </style>
+</head>
+<body>
+    <div id="logContainer"></div>
+    <script>
+        window.onload = function() {
+            var logContainer = document.getElementById('logContainer');
+            
+            // Replace 'logs/' with the path to your log files
+            var logFilesPath = '\\172.20.100.130\\c$\\inetpub\\wwwroot\\logs\\2024-03-21\\Backup_CRM\\nlogfile.txt';
+            
+            // Fetch log files from the server
+            fetch(logFilesPath)
+            .then(response => response.text())
+            .then(data => displayLogs(data))
+            .catch(error => console.error('Error fetching log files:', error));
+
+            function displayLogs(logs) {
+                var logLines = logs.split('\n');
+                logLines.forEach(logLine => {
+                    if (logLine.includes('[ERROR]')) {
+                        appendLog(logLine, 'error');
+                    } else if (logLine.includes('[WARNING]')) {
+                        appendLog(logLine, 'warning');
+                    } else if (logLine.includes('[INFO]')) {
+                        appendLog(logLine, 'info');
+                    } else if (logLine.includes('[DEBUG]')) {
+                        appendLog(logLine, 'debug');
+                    } else {
+                        appendLog(logLine, '');
+                    }
+                });
+            }
+
+            function appendLog(logLine, logLevel) {
+                var logElement = document.createElement('div');
+                logElement.textContent = logLine;
+
+                // Add specific class based on log level
+                if (logLevel) {
+                    logElement.classList.add(logLevel);
+                }
+
+                logContainer.appendChild(logElement);
+            }
+        }
+    </script>
+</body>
+</html>

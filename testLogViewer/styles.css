@@ -1,0 +1,79 @@
+/* Style the log container */
+#logContainer {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Style different log levels */
+/* .error { color: red; }
+.warning { color: orange; }
+.info { color: blue; }
+.debug { color: green; } */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.log-table th, .log-table td {
+    border: 1px solid #eba0a0;
+    padding: 8px;
+}
+
+.log-table th {
+    background-color: #f2f2f2;
+}
+
+.log-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* 
+.log-table tr:hover {
+    background-color: #ddd;
+} */
+
+
+/* Define CSS classes for different log types */
+.info-log {
+    background-color: lightblue;
+  }
+  
+  .error-log {
+    background-color: lightcoral;
+  }
+  
+  .debug-log {
+    background-color: lightgray;
+  }
+  
+  .fatal-log {
+    background-color: black;
+    color: white; /* Set text color to white for better readability */
+  }
+  
+  .warn-log {
+    background-color: yellow;
+  }
+  
