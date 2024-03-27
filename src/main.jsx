@@ -23,8 +23,11 @@ import ScrollIndicator from "./Components/scroll-indicator/index.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <LightDarkMode />
-  <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
-  // <LoadMoreData />
+  <>
+    {/* // <LightDarkMode /> */}
+    <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+    {/* <LoadMoreData /> */}
+    </>
   // <QRCodeGenerator />
   // <TreeView menus = {menus}/>
   
