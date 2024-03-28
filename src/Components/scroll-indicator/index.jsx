@@ -69,7 +69,6 @@ export default function ScrollIndicator({ url }) {
         </h3>
       </div>
       <div className="data-container">
-        <div className="load-image-data">
           <div className="product-container">
             {loading ? <h3>Please Wait, Try to load data.</h3> : null}
             {error ? (
@@ -87,7 +86,6 @@ export default function ScrollIndicator({ url }) {
               : null}
           </div>
         </div>
-      </div>
     </div>
   );
 }
