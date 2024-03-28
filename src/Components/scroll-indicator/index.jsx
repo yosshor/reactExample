@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
+import { useHref } from "react-router-dom";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -52,7 +53,7 @@ export default function ScrollIndicator({ url }) {
   return (
     <div>
       <div className="top-container">
-        <h1 >Custom Scroll Indicator</h1>
+        <h1>Custom Scroll Indicator</h1>
         <div className="scroll-progress-tracking-container">
           <div
             className="current-progress-bar"
@@ -60,16 +61,32 @@ export default function ScrollIndicator({ url }) {
           ></div>
         </div>
       </div>
-
+      <div className="iphone">
+        <h3 className="iphone-title">
+          <a href="https://www.google.com">
+            <strong>get new Iphone</strong>
+          </a>
+        </h3>
+      </div>
       <div className="data-container">
-        <div className="iphone"><h3 className="iphone-title" ><strong>get new Iphone</strong></h3></div>
-        {loading ? <h3>Please Wait, Try to load data.</h3> : null}
-        {error ? (
-          <h3>Some Error Occurred. Please check your connection</h3>
-        ) : null}
-        {data && data.length > 0
-          ? data.map((item) => <p key={item.id}>{item.title}</p>)
-          : null}
+        <div className="load-image-data">
+          <div className="product-container">
+            {loading ? <h3>Please Wait, Try to load data.</h3> : null}
+            {error ? (
+              <h3>Some Error Occurred. Please check your connection</h3>
+            ) : null}
+            {data && data.length > 0
+              ? data.map((image, index) => (
+                  <div className="product" key={index}>
+                    <img src={image.thumbnail} alt={image.title} />
+                    <p>
+                      {image.title} {image.id}
+                    </p>
+                  </div>
+                ))
+              : null}
+          </div>
+        </div>
       </div>
     </div>
   );
