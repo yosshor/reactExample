@@ -1,0 +1,133 @@
+.user-github {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  padding-left: 25%;
+}
+
+.user-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.user-wrapper input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 0.7rem;
+  box-shadow: 0px 0px 7px #666;
+}
+
+.user-wrapper button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00f4ec;
+  color: #000;
+  cursor: pointer;
+}
+
+.user-info{
+    padding: 15px;
+    border-radius: 10px;    
+
+    border: 1px solid;
+    
+}
+
+.avatar{
+    height: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+
+.name{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.name h4{
+    /* margin: 0px; */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-info div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
+}
+.user{
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid;
+  width: 50%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* .user-github {
+  background-color: rgb(246, 247, 246);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:400px;
+  position: relative;
+} */
+/* .user-info {
+  text-align: left;
+  background-color: rgb(216, 189, 165);
+
+}
+img {
+  cursor: pointer;
+}
+input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    border-radius: 0.7rem;
+    box-shadow: 0px 0px 7px #666;
+    width:300px;
+    height: 25%;
+}
+.user-button {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(72, 126, 128);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+} */

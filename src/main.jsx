@@ -18,17 +18,20 @@ import ReactDOM from "react-dom/client";
 // import TreeView from "./Components/tree-view/index.jsx";
 // import QRCodeGenerator from "./Components/qr-code-generator/index.jsx";
 // import LightDarkMode from "./Components/dark-light-mode/index.jsx"
-import ScrollIndicator from "./Components/scroll-indicator/index.jsx";
-import TabExmaple from "./Components/tabs/tab-exmaple.jsx";
-import ModalExample from "./Components/show-modal/modal-example.jsx";
+// import ScrollIndicator from "./Components/scroll-indicator/index.jsx";
+// import TabExmaple from "./Components/tabs/tab-exmaple.jsx";
+// import ModalExample from "./Components/show-modal/modal-example.jsx";
+import GithubProfileFinder from "./Components/github-profile-finder/index.jsx"
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <LightDarkMode />
   <>
+  <GithubProfileFinder />
     {/* // <LightDarkMode /> */}
     {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
     {/* <TabExmaple /> */}
-    <ModalExample />
+    {/* <ModalExample /> */}
     {/* <ImageSlider
        url={"https://picsum.photos/v2/list"}
        page={"2"}
