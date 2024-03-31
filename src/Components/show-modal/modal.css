@@ -1,0 +1,84 @@
+.close-modal-icon {
+  cursor: pointer;
+  text-align: right;
+  justify-items: right;
+  align-items: baseline;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  /* border: 1px solid red; */
+  width: 80%;
+  animation-name: animateModal;
+  animation-duration: 0.5s;
+}
+
+.modal-button {
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  font-size: medium;
+  color: rgb(176, 206, 143);
+  background-color: rgb(9, 35, 83);
+  cursor: pointer;
+  border-radius: 25px;
+  border:solid;
+  border-width: 12px;
+}
+
+.modal-div {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  justify-content: space-between; /* Aligns items with space between them */
+  align-items: center; /* Aligns items vertically */
+  background-color: aqua;
+}
+
+.footer {
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  background-color: aqua;
+  position: relative;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  display: inline-block;
+}
+
+h2 {
+  display: fixed;
+  margin: 0 0 0 0;
+}
+.body{
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    background-image: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Example gradient from orange to light orange */
+    display: inline-block;
+}
+
+
+@keyframes animateModal {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
