@@ -22,12 +22,13 @@ import ReactDOM from "react-dom/client";
 // import TabExmaple from "./Components/tabs/tab-exmaple.jsx";
 // import ModalExample from "./Components/show-modal/modal-example.jsx";
 import GithubProfileFinder from "./Components/github-profile-finder/index.jsx"
-
+import SearchAutocomplete from "./Components/search-autocomplete-api/index.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <LightDarkMode />
   <>
-  <GithubProfileFinder />
+  <SearchAutocomplete />
+  {/* <GithubProfileFinder /> */}
     {/* // <LightDarkMode /> */}
     {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
     {/* <TabExmaple /> */}
