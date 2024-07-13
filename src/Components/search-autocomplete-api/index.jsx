@@ -4,6 +4,8 @@ import { useSearchParams } from "react-router-dom";
 import Options from "./options";
 
 
+
+
 export default function SearchAutocomplete() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

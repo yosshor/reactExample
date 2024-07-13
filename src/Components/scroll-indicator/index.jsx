@@ -8,38 +8,57 @@ export default function ScrollIndicator({ url }) {
   const [error, setError] = useState("");
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  async function fetchData(getUrl) {
-    console.log(getUrl);
+// +  /**
+// +   * Fetches data from the specified URL and updates the component state with the fetched data.
+// +   *
+// +   * @param {string} getUrl - The URL to fetch data from.
+// +   * @return {Promise<void>} A promise that resolves when the data has been fetched and the component state has been updated.
+// +   */
+  //   async function fetchData(getUrl){
+  //    console.log(getUrl);
+  //    try {
+  //      setLoading(true);
+  //      const request = await fetch(getUrl);
+  //      const data = await request.json();
+  //      console.log(data);
+  //      setData(data.products);
+  //      setLoading(false);
+  //    } catch (e) {
+  //      console.error(`Error ${e}`);
+  //      setError(e);
+  //      setLoading(false);
+  //    }
+  //  }
+
+   const fetchData = async (url) => {
     try {
-      setLoading(true);
-      const request = await fetch(getUrl);
-      const data = await request.json();
-      console.log(data);
-      setData(data.products);
+      const response = await fetch(url);
+      const result = await response.json();
+      setData(result);
       setLoading(false);
-    } catch (e) {
-      console.log(`Error ${e}`);
-      setError(e);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setError(error);
       setLoading(false);
     }
-  }
+  };
 
   function removeEventListener() {
     window.removeEventListener("scroll", () => {});
   }
 
   function handleScrolling() {
-    const scorlled =
+    const scrolled =
       document.body.scrollTop || document.documentElement.scrollTop;
     const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    const percentage = (scorlled / height) * 100;
+    const percentage = (scrolled / height) * 100;
     console.log(percentage);
     setScrollPercentage(percentage);
   }
 
-  useEffect(() => {
+   useEffect(() => {
     console.log(url);
     fetchData(url);
   }, [url]);
